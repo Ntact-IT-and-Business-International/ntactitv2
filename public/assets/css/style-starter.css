@@ -346,7 +346,7 @@ legend {
 
 @media (max-width: 1200px) {
   legend {
-    font-size: calc(1.275rem + 0.3vw);
+    font-size: calc(1.3rem + 0.35vw);
   }
 }
 
@@ -11906,9 +11906,9 @@ div#small-dialog iframe {
 
 .navbar .navbar-brand span.lostyle-1 {
   color: var(--primary-color);
-  font-weight: 1200;
+  font-weight:800;
   font-size: 45px;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 
 a.navbar-brand:hover {
@@ -12434,19 +12434,23 @@ h3.title-main:after {
 }
 
 .banner-19 .main-content {
+  margin-left: 350px;
+  text-align: center;
   max-width: 560px;
   margin-top: 70px;
 }
 
 .banner-19 .main-content h4 {
-  font-size: 48px;
-  line-height: 58px;
+  font-size: 50px;
+  line-height: 75px;
   color: #fff;
   font-weight: 700;
 }
 
 .banner-19 .main-content p {
   color: #fff;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 /* responsive */

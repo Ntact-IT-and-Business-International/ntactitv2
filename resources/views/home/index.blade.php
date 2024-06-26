@@ -13,8 +13,9 @@ Author URL: http://w3layouts.com
     <!-- google-fonts -->
     <link href="//fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
     <!-- //google-fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+   
     <!-- Font-Awesome-Icons-CSS -->
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
     <!-- Template CSS Style link -->
@@ -42,6 +43,67 @@ Author URL: http://w3layouts.com
                 padding: 0 25px;
             }
         }
+        .dropdown-submenu {
+      position: relative;
+    }
+
+    .dropdown-submenu .dropdown-menu {
+      margin-top: 0;
+      display: none;
+      position: absolute;
+      z-index: 1000; /* Ensure dropdown is above other content */
+    }
+
+    .dropdown-submenu:hover .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-item:last-child {
+      margin-bottom: 1rem; /* Add margin to separate items */
+    }
+
+    /* Adjust dropdown position to fit within navbar */
+    .navbar-nav {
+      overflow: visible; /* Allow overflow for absolute positioning */
+    }
+
+    /* Ensure dropdowns stay within navbar bounds */
+    .dropdown-submenu .dropdown-menu {
+      top: 100%; /* Position below the parent */
+      left: 18%; /* Align with the parent */
+      right: auto; /* Reset right positioning */
+    }
+
+    .demi-content {
+        padding: 10px;
+        color: #555;
+    }
+    .dropdown-item.sub-item {
+        padding-left: 20%;
+        min-width: 300px;
+    }
+    .caret {
+        margin-left: 5px;
+        border-top: 4px solid;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+        display: inline-block;
+        width: 0;
+        height: 0;
+        vertical-align: middle;
+    }
+    .caret-right {
+        margin-left: 5px;
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+        border-left: 4px solid;
+        display: inline-block;
+        width: 0;
+        height: 0;
+        vertical-align: middle;
+    }
+
+    
     </style>
 </head>
 
@@ -70,10 +132,24 @@ Author URL: http://w3layouts.com
 
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul class="navbar-nav ml-lg-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Services<span class="sr-only">(current)</span></a>
-                        </li>
-
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               Services
+                                <!-- ▼ Arrow indicator -->
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="#">Web Design</a>
+                              <a class="dropdown-item" href="#">Application Development</a>
+                              <a class="dropdown-item" href="#">Bulk SMS</a>
+                              <a class="dropdown-item" href="#">placeholder1</a>
+                              <a class="dropdown-item" href="#">Placeholder </a>
+                              <a class="dropdown-item" href="#">Placeholder </a>
+                              <a class="dropdown-item" href="#">Placeholder</a>
+                              <a class="dropdown-item" href="#">Portals </a>
+                              <a class="dropdown-item" href="#">Artificial Intelligence </a>
+                              <a class="dropdown-item" href="#">Data Analytics </a>
+                            </div>
+                          </li>
                         
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -81,42 +157,95 @@ Author URL: http://w3layouts.com
                                 <!-- ▼ Arrow indicator -->
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="#">Overview</a>
-                              <a class="dropdown-item" href="#">Careers</a>
-                              <a class="dropdown-item" href="#">News</a>
+                              <a class="dropdown-item" href="#">CRM</a>
+                              <a class="dropdown-item" href="#">ERP</a>
+                              <a class="dropdown-item" href="#">E-learning</a>
+                              <a class="dropdown-item" href="#">Cloud Computing</a>
+                              <a class="dropdown-item" href="#">Cyber Security </a>
+                              <a class="dropdown-item" href="#">Digital commerce </a>
+                              <a class="dropdown-item" href="#">Messaging</a>
+                              <a class="dropdown-item" href="#">HR management</a>
+                              <a class="dropdown-item" href="#">Portals </a>
+                              <a class="dropdown-item" href="#">Artificial Intelligence </a>
+                              <a class="dropdown-item" href="#">Data Analytics </a>
                             </div>
                           </li>
-                        <li class="nav-item dropdown">
+                          <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Industries ▼  <!-- ▼ Arrow indicator -->
+                                Industries
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="#">Overview</a>
-                              <a class="dropdown-item" href="#">Careers</a>
-                              <a class="dropdown-item" href="#">News</a>
-                            </div>
-                          </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Company  <!-- ▼ Arrow indicator -->
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="#">Overview</a>
-                              <a class="dropdown-item" href="#">Careers</a>
-                              <a class="dropdown-item" href="#">News</a>
-                            </div>
-                          </li>
+                                <a class="dropdown-item" href="#" data-toggle="collapse" data-target="#educationCollapse" aria-expanded="false" aria-controls="educationCollapse" onclick="event.preventDefault(); event.stopPropagation(); $('#educationCollapse').collapse('toggle');">Education <span class="caret-right"></span></a>
+                                <div class="collapse" id="educationCollapse">
+                                    <a class="dropdown-item sub-item" href="#">School Management System</a>
+                                    <a class="dropdown-item sub-item" href="#">E-learning Platforms</a>
+                                    <a class="dropdown-item sub-item" href="#">Campus WIFI & Networking</a>
+                                    <a class="dropdown-item sub-item" href="#">Classroom Technology</a>
+                                    <a class="dropdown-item sub-item" href="#">I.T Support & Maintainence</a>
+                                    <a class="dropdown-item sub-item" href="#">Digital Specialised Courses</a>
+                                </div>
+                                <a class="dropdown-item" href="#" data-toggle="collapse" data-target="#healthCollapse" aria-expanded="false" aria-controls="healthCollapse" onclick="event.preventDefault(); event.stopPropagation(); $('#healthCollapse').collapse('toggle');">Health <span class="caret-right"></span></a>
+                                <div class="collapse" id="healthCollapse">
+                                    <a class="dropdown-item sub-item" href="#">Electronic Medical Records</a>
+                                    <a class="dropdown-item sub-item" href="#">Telemedicine Solutions</a>
+                                    <a class="dropdown-item sub-item" href="#">Health Analytics</a>
+                                    <a class="dropdown-item sub-item" href="#">Cybersecurity for Health</a>
+                                    <a class="dropdown-item sub-item" href="#">IoT-enabled Medical Devices</a>
+                                </div>
+                                <a class="dropdown-item" href="#" data-toggle="collapse" data-target="#businessCollapse" aria-expanded="false" aria-controls="businessCollapse" onclick="event.preventDefault(); event.stopPropagation(); $('#businessCollapse').collapse('toggle');">Business <span class="caret-right"></span></a>
+                                <div class="collapse" id="businessCollapse">
+                                   
+                                </div>
+                                <a class="dropdown-item" href="#" data-toggle="collapse" data-target="#educationCollapse" aria-expanded="false" aria-controls="educationCollapse" onclick="event.preventDefault(); event.stopPropagation(); $('#educationCollapse').collapse('toggle');">Smart Agriculture <span class="caret-right"></span></a>
+                                <div class="collapse" id="educationCollapse">
+                                   
+                                </div>
+                                <a class="dropdown-item" href="#" data-toggle="collapse" data-target="#educationCollapse" aria-expanded="false" aria-controls="educationCollapse" onclick="event.preventDefault(); event.stopPropagation(); $('#educationCollapse').collapse('toggle');">Security <span class="caret-right"></span></a>
+                                <div class="collapse" id="educationCollapse">
+                                    
+                                </div>
+                                <a class="dropdown-item" href="#" data-toggle="collapse" data-target="#educationCollapse" aria-expanded="false" aria-controls="educationCollapse" onclick="event.preventDefault(); event.stopPropagation(); $('#educationCollapse').collapse('toggle');">Construction <span class="caret-right"></span></a>
+                                <div class="collapse" id="educationCollapse">
+                                   
+                                </div>
                         
-                        <li class="nav-item">
-                            <a href="about.html" class="btn btn-style mt-md-1 mt-4">Contact Us</a>
-
+                            </div>
                         </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Company
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#" data-toggle="collapse" data-target="#aboutCollapse" aria-expanded="false" aria-controls="aboutCollapse" onclick="event.preventDefault(); event.stopPropagation(); $('#aboutCollapse').collapse('toggle');">About us <span class="caret-right"></span></a>
+                                <div class="collapse" id="aboutCollapse">
+                                    <a class="dropdown-item sub-item" href="#">Team</a>
+                                    <a class="dropdown-item sub-item" href="#">Overiew</a>
+                                </div>
+                        
+                                <a class="dropdown-item" href="#" data-toggle="collapse" data-target="#careersCollapse" aria-expanded="false" aria-controls="careersCollapse" onclick="event.preventDefault(); event.stopPropagation(); $('#careersCollapse').collapse('toggle');">Careers <span class="caret-right"></span></a>
+                                <div class="collapse" id="careersCollapse">
+                                    <a class="dropdown-item sub-item" href="#">Internships</a>
+                                    <a class="dropdown-item sub-item" href="#">Jobs Listings</a>
+                                </div>
+                        
+                                <a class="dropdown-item" href="#" data-toggle="collapse" data-target="#csrCollapse" aria-expanded="false" aria-controls="csrCollapse">Corporate Social Responsibility</a>
+                                <div class="collapse" id="csrCollapse">
+                                    <div class="dropdown-item demi-content">Demi content for CSR</div>
+                                </div>
+                        
+                                <a class="dropdown-item" href="#" data-toggle="collapse" data-target="#newsCollapse" aria-expanded="false" aria-controls="newsCollapse">News</a>
+                                <div class="collapse" id="newsCollapse">
+                                    <div class="dropdown-item demi-content">Demi content for News</div>
+                                </div>
+                            </div>
+                        </li>
+                        
                         <!--
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact</a>
                         </li>
                     -->
-                        <!-- search button commennted out
+                        <!-- search button   commented out
                         <div class="search-right ml-lg-3">
                             <form action="#search" method="GET" class="search-box position-relative">
                                 <div class="input-search">
@@ -126,10 +255,14 @@ Author URL: http://w3layouts.com
                                 <button type="submit" class="btn search-btn"><i class="fa fa-search"
                                         aria-hidden="true"></i></button>
                             </form>
-                        </div>  
-                    -->
+                        </div>   -->
+        
                         <!-- //search button -->
-                    </ul>
+                        <li class="nav-item">
+                            <a href="about.html" class="btn btn-style mt-md-1 mt-4">Contact Us</a>
+
+                        </li>
+                    </ul>  
                 </div>
                 <!-- toggle switch for light and dark theme -->
                <!-- 
@@ -167,9 +300,9 @@ Author URL: http://w3layouts.com
                         <a class="logo" href="index.html">
                             <img src="assets/images/logo1.png" alt="Your logo" title="Your logo" style="height:35px;" />
                         </a> -->
-                        <h4>We Execute Ideas From Start to Finish </h4>
-                        <p class="mt-3">Irferendis repudandae fugia rchitecto beatae rederit svitae recusa ndae
-                            debitifacere uiimi placeat maxienui </p>
+                        <h4>Inspiring Technology </h4>
+                        <p class="mt-3">We execute your ideas from start to finish, we help you to quickly realise your
+                            business goals through our cutting edge inovative solutions  </p>
                         <a href="about.html" class="btn btn-style mt-md-5 mt-4">Read More</a>
                     </div>
                 </div>
