@@ -105,6 +105,20 @@ Author URL: http://w3layouts.com
 
     
     </style>
+
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/6681e286eaf3bd8d4d169ca2/1i1llpo13';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
 </head>
 
 <body>
@@ -138,13 +152,10 @@ Author URL: http://w3layouts.com
                                 <!-- ▼ Arrow indicator -->
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="#">Web Design</a>
+                              <a class="dropdown-item" href="{{ url('/services') }}">Web Design</a>
                               <a class="dropdown-item" href="#">Application Development</a>
                               <a class="dropdown-item" href="#">Bulk SMS</a>
-                              <a class="dropdown-item" href="#">placeholder1</a>
-                              <a class="dropdown-item" href="#">Placeholder </a>
-                              <a class="dropdown-item" href="#">Placeholder </a>
-                              <a class="dropdown-item" href="#">Placeholder</a>
+                              <a class="dropdown-item" href="#">Enterprise I.T</a>
                               <a class="dropdown-item" href="#">Portals </a>
                               <a class="dropdown-item" href="#">Artificial Intelligence </a>
                               <a class="dropdown-item" href="#">Data Analytics </a>
@@ -259,7 +270,7 @@ Author URL: http://w3layouts.com
         
                         <!-- //search button -->
                         <li class="nav-item">
-                            <a href="about.html" class="btn btn-style mt-md-1 mt-4">Contact Us</a>
+                            <a href="{{ url('/about') }}" class="btn btn-style mt-md-1 mt-4">Contact Us</a>
 
                         </li>
                     </ul>  
@@ -918,8 +929,6 @@ Author URL: http://w3layouts.com
         <div class="copyright-footer text-center">
             <div class="container">
                 <div class="columns">
-                    <p>@2021 Execution. All rights reserved. Design by
-                        <a href="https://w3layouts.com/" target="_blank"> W3Layouts</a>
                     </p>
                 </div>
             </div>
@@ -929,10 +938,13 @@ Author URL: http://w3layouts.com
     <!-- //footer -->
 
     <!-- Js scripts -->
-    <!-- move top -->
+    <!-- move top --> 
+    <!--
     <button onclick="topFunction()" id="movetop" title="Go to top">
         <span class="fas fa-level-up-alt" aria-hidden="true"></span>
     </button>
+    -->
+    
     <script>
         // When the user scrolls down 20px from the top of the document, show the button
         window.onscroll = function () {
